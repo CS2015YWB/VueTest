@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue 示例</title>
+    </head>
+    <body>
+        <div id="app">
+            <!--img v-bind:src="imgurl"-->
+            <!--语法糖-->
+            <img :src="imgurl">
+        </div>
+        <!--自动识别最新稳定版本的 Vue-->
+        <script src = "https://unpkg.com/vue/dist/vue.min.js"></script>
+        <script>
+           new Vue({
+               el: '#app',
+               data: {
+                   imgurl: 'https://cn.vuejs.org/images/logo.png'
+               }
+           })
+        </script>
+    </body>
+</html>

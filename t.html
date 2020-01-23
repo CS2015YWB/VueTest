@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue 示例</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!--自动识别最新稳定版本的 Vue-->
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script>
+      var data = { a: 987654321 };
+      var vm = new Vue({
+        el: "#app",
+        data: data,
+        created: function() {
+          console.log("a is " + this.a);
+        }
+      });
+
+      vm.$data === data;
+      vm.$el === document.getElementById("#app");
+      vm.$watch("a", function(newValue, oldValue) {});
+    </script>
+  </body>
+</html>

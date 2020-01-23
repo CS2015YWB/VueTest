@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue 示例</title>
+    </head>
+    <body>
+        <div id="app">
+            <p v-if='show'>Hello,World!</p>
+        </div>
+        <!--自动识别最新稳定版本的 Vue-->
+        <script src = "https://unpkg.com/vue/dist/vue.min.js"></script>
+        <script>
+           new Vue({
+               el: '#app',
+               data: {
+                   show: false
+               }
+           })
+        </script>
+    </body>
+</html>

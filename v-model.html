@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue 示例</title>
+    </head>
+    <body>
+        <div id="app">
+            <p>{{date}}</p>
+            <input v-model="yourname" placeholder="xiaoming">
+            <p>hello,{{yourname}}</p>
+        </div>
+        <!--自动识别最新稳定版本的 Vue-->
+        <script src = "https://unpkg.com/vue/dist/vue.min.js"></script>
+        <script>
+           new Vue({
+               el: '#app',
+               data: {
+                   yourname:'',
+                   date: new Date()
+               },
+               mounted: function () {
+                   var _this = this;
+                   this.timer = setInterval(function(){
+                       _this.date = new Date()
+                   }, 1000);
+               },
+               beforeDestroy: function() {
+                   if(this.timer) {
+                       clearInterval(this.timer);
+                   }
+               }
+           })
+        </script>
+    </body>
+</html>

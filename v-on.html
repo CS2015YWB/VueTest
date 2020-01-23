@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue 示例</title>
+    </head>
+    <body>
+        <div id="app">
+            <img v-bind:src="imgurl">
+            <!--button v-on:click="imgurl='https://cn.vuejs.org/images/logo.png'">hello</button-->
+            <!--语法糖-->
+            <button @click="imgurl='https://cn.vuejs.org/images/logo.png'">hello</button>
+        </div>
+        </div>
+        <!--自动识别最新稳定版本的 Vue-->
+        <script src = "https://unpkg.com/vue/dist/vue.min.js"></script>
+        <script>
+           new Vue({
+               el: '#app',
+               data: {
+                   imgurl: 'https://www.baidu.com/img/bd_logo1.png?where=super'
+               }
+           })
+        </script>
+    </body>
+</html>
